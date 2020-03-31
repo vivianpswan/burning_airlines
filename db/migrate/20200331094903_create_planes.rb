@@ -4,6 +4,7 @@ class CreatePlanes < ActiveRecord::Migration[5.2]
       t.text :name
       t.integer :row
       t.integer :column
+      t.integer :user_id
 
       t.timestamps
     end
