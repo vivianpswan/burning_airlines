@@ -32,7 +32,7 @@ r2 = Reservation.create :name => 'Azzi', :origin => 'Melbourne', :destination =>
 r3 = Reservation.create :name => 'Kuljit', :origin => 'Sydney', :destination => 'Singapore', :reservation_date => "01-05-2020"
 
 
-puts "#{ Plane.count } planes created"
+puts "#{ Plane.count } reservations created"
 
 # Associations #################################################################
 puts "Users and Planes"
