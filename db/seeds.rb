@@ -5,3 +5,41 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+u1 = User.create :name => 'Viv'
+u2 = User.create :name => 'Azzi'
+u3 = User.create :name => 'Kuljit', :admin => true
+
+puts "#{ User.count } users created"
+
+Plane.destroy_all
+p1 = Plane.create :name => 'Virgin', :row => '5', :column => '5'
+p2 = Plane.create :name => 'Qantas', :row => '6', :column => '6'
+
+puts "#{ Plane.count } planes created"
+
+Flight.destroy_all
+f1 = Flight.create :flight_name => '747', :origin => 'Sydney', :destination => 'Singapore', :flight_date => "01-05-2020"
+f2 = Flight.create :flight_name => '757', :origin => 'Melbourne', :destination => 'Italy', :flight_date => "01-06-2020"
+
+
+puts "#{ Flight.count } flights created"
+
+Reservation.destroy_all
+r1 = Reservation.create :row => '1', :column => '1'
+r2 = Reservation.create :row => '1', :column => '2'
+r3 = Reservation.create :row => '1', :column => '3'
+r4 = Reservation.create :row => '1', :column => '4'
+puts "#{ Reservation.count } reservations created"
+
+# Associations #################################################################
+
+puts "Planes and Fights"
+p1.flights << f1 << f2
+puts "Users and Reservations"
+u1.reservations << r1 << r4
+u2.reservations << r2
+puts "Flights and Reservations"
+f1.reservations << r1 << r3
+f2.reservations << r2
