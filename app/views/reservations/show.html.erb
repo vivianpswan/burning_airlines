@@ -1,26 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @reservation.name %>
-</p>
-
-<p>
-  <strong>Origin:</strong>
-  <%= @reservation.origin %>
-</p>
-
-<p>
-  <strong>Destination:</strong>
-  <%= @reservation.destination %>
-</p>
-
-<p>
-  <strong>Reservation date:</strong>
-  <%= @reservation.reservation_date %>
-</p>
-
-<p>
   <strong>User:</strong>
   <%= @reservation.user_id %>
 </p>
@@ -28,6 +8,16 @@
 <p>
   <strong>Flight:</strong>
   <%= @reservation.flight_id %>
+</p>
+
+<p>
+  <strong>Row:</strong>
+  <%= @reservation.row %>
+</p>
+
+<p>
+  <strong>Column:</strong>
+  <%= @reservation.column %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |

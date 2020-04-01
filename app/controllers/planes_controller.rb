@@ -69,6 +69,6 @@ class PlanesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plane_params
-      params.require(:plane).permit(:name, :row, :column, :user_id)
+      params.require(:plane).permit(:name, :row, :column)
     end
 end
