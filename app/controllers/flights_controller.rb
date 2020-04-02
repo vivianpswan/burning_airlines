@@ -1,6 +1,7 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
+
   # GET /flights
   # GET /flights.json
   def index
@@ -14,6 +15,7 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
+
   end
 
   # GET /flights/new
@@ -77,7 +79,7 @@ class FlightsController < ApplicationController
     end
 
     def filtering_params(params)
-      params.slice(:flight_name, :origin, :destination, :flight_date, :plane_id)
+      params.slice( :origin, :destination)
     end
 
 end
